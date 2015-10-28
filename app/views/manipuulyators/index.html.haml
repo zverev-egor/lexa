@@ -1,0 +1,32 @@
+/ %h1 Listing manipuulyators
+
+/ %table
+/   %thead
+/     %tr
+/       %th
+/       %th
+/       %th
+
+/   %tbody
+/     - @manipuulyators.each do |manipuulyator|
+/       %tr
+/         %td= link_to 'Show', manipuulyator
+/         %td= link_to 'Edit', edit_manipuulyator_path(manipuulyator)
+/         %td= link_to 'Destroy', manipuulyator, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+/ %br
+
+/ = link_to 'New Manipuulyator', new_manipuulyator_path
+
+
+
+.page-header
+  %h1
+    Манипуляторы
+    -if Manipuulyator.add?(@current_user)
+      =link_to new_manipuulyator_path,class: 'btn btn-primary' do
+        =fa_icon 'plus'
+.list-group
+  -@manipuulyators.each do |manipuulyator|
+    =link_to manipuulyator.name,manipuulyator,class: 'list-group-item'
+  =paginate @manipuulyators

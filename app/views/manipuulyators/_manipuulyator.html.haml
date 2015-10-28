@@ -1,0 +1,5 @@
+=link_to manipuulyator,class: 'list-group-item' do
+  -if manipuulyator.foto?
+    .pull-right=image_tag manipuulyator.foto.url(:thumb), alt: manipuulyator.name
+  %h4=manipuulyator.name
+  .clearfix

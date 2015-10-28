@@ -1,0 +1,31 @@
+ru:
+  app:
+    user: Пользователь
+    manipuulyator: Манипулятор
+
+  activerecord:
+    models:
+      user: Пользователь
+    attributes:
+      user:
+        name: Имя
+        email: Адрес электронной почты
+        password: Пароль
+        password_confirmation: Пароль (повторно)
+        role: Роль
+      manipuulyator:
+        name: Название
+        description: Описание
+  helpers:
+    sure: Вы уверены?
+    submit:
+      create: Сохранить
+      submit: Сохранить
+      update: Сохранить
+  views:
+    pagination:
+      first: ⇤
+      last: ⇥
+      previous: ←
+      next: →
+      truncate: …
